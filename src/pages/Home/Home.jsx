@@ -215,7 +215,7 @@ const Home = ({ loading }) => {
               >
                 {/* <div className="hero-card"> */}
                 <div className="slider-container">
-                  <video autoPlay muted loop playsInline>
+                  <video autoPlay muted loop playsInline loading="lazy">
                     <source
                       src="/stock video/hero-1.mp4"
                       type="video/mp4"
@@ -275,6 +275,7 @@ const Home = ({ loading }) => {
                       loop
                       muted
                       playsInline
+                      loading="lazy"
                     />
                     <video
                       src="/stock video/services-2.mp4"
@@ -282,6 +283,7 @@ const Home = ({ loading }) => {
                       loop
                       muted
                       playsInline
+                      loading="lazy"
                     />
                     <video
                       src="/stock video/services-3.mp4"
@@ -289,6 +291,7 @@ const Home = ({ loading }) => {
                       loop
                       muted
                       playsInline
+                      loading="lazy"
                     />
                   </div>
                 </AnimatedContent>
