@@ -20,6 +20,12 @@ export const ContactForm = () => {
     const formData = new FormData(form);
     formData.append("access_key", process.env.EMAIL_KEY);
 
+    console.log("lol")
+    console.log(process.env.EMAIL_KEY);
+    console.log(import.meta.env.EMAIL_KEY);
+    console.log(process.env.VITE_EMAIL_KEY);
+    console.log(import.meta.env.VITE_EMAIL_KEY);
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
