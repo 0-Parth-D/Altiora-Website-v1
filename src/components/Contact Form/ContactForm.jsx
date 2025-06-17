@@ -21,37 +21,34 @@ export const ContactForm = () => {
     formData.append("access_key", import.meta.env.VITE_EMAIL_KEY);
 
     try {
-      const response = await fetch("/api/submitForm", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData,
       });
 
-      // Check if the response status is OK (200-299)
-      if (!response.ok) {
-        throw new Error(`Error: ${response.status}`);
-      }
+      const data = await response.json();
 
-      // Log the raw response text to see if it's a valid JSON
-      const textResponse = await response.text();
-      console.log("Response Text: ", textResponse);
-
-      // If the response is valid JSON, parse it
-      const data = JSON.parse(textResponse); // If the response is empty, you will handle this case later
-
+      // Reset the dialog before showing it
       if (data.success) {
         setIsSuccess(true);
         setResult("Form Submitted Successfully");
-        form.reset();
-        setMessage("");
       } else {
         setIsSuccess(false);
         setResult(data.message || "Submission failed.");
         console.error("Web3Forms error:", data);
       }
+      setShowDialog(true); // Show dialog after setting the result
+
+      // Reset form after submission success
+      if (data.success) {
+        form.reset();
+        setMessage("");
+      }
     } catch (error) {
       console.error("Form error:", error);
       setIsSuccess(false);
       setResult("An error occurred. Please try again.");
+      setShowDialog(true);
     } finally {
       setLoading(false);
     }
@@ -167,7 +164,9 @@ export const ContactForm = () => {
       <div className={`dialog-box-bg ${showDialog ? "open" : ""}`}>
         <div className="dialog-box-container">
           <div className="dialog-header text text-h-4 text-medium text-onest">
-            {isSuccess ? "Your Message was Delivered!" : "Something Went Wrong"}
+            {isSuccess
+              ? "Your Message was Delivered!"
+              : "Something Went Wrong"}
             <img
               src="/icons/close.svg"
               alt="Close"
@@ -178,7 +177,9 @@ export const ContactForm = () => {
           <div className="dialog-body">
             <img
               className="dialog-check"
-              src={isSuccess ? "/icons/check.svg" : "/icons/close.svg"}
+              src={
+                isSuccess ? "/icons/check.svg" : "/icons/close.svg"
+              }
               alt={isSuccess ? "Success" : "Error"}
             />
             <div className="dialog-title text text-h-6 text-medium text-onest">
@@ -188,13 +189,13 @@ export const ContactForm = () => {
               {isSuccess ? (
                 <>
                   Thank you for reaching out. We strive to respond to all
-                  inquiries as promptly as possible and appreciate your patience
-                  in the meantime.
+                  inquiries as promptly as possible and appreciate your
+                  patience in the meantime.
                 </>
               ) : (
                 <>
-                  Something went wrong while submitting your message. Please try
-                  again later or contact us directly.
+                  Something went wrong while submitting your message. Please
+                  try again later or contact us directly.
                 </>
               )}
             </div>
