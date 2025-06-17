@@ -21,7 +21,7 @@ export const ContactForm = () => {
     formData.append("access_key", import.meta.env.VITE_EMAIL_KEY);
 
     try {
-      const response = await fetch("http://localhost:3000/api/submitForm", {
+      const response = await fetch("/api/submitForm", {
         method: "POST",
         body: formData,
       });
