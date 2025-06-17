@@ -18,7 +18,7 @@ export const ContactForm = () => {
 
     const form = event.target;
     const formData = new FormData(form);
-    formData.append("access_key", process.env.EMAIL_KEY);
+    formData.append("access_key", import.meta.env.VITE_EMAIL_KEY);
 
     console.log("lol")
     console.log(process.env.EMAIL_KEY);
