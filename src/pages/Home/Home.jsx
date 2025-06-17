@@ -12,7 +12,7 @@ import FadeContent from "../../animations/Animations/FadeContent/FadeContent";
 import AnimatedContent from "../../animations/Animations/AnimatedContent/AnimatedContent";
 import SplitText from "../../animations/TextAnimations/SplitText/SplitText";
 import { useEffect, useState } from "react";
-import { ContactForm } from "../../components/Contact Form/contactForm";
+import { ContactForm } from "../../components/Contact Form/ContactForm";
 
 import { Link, useLocation } from "react-router";
 
