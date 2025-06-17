@@ -57,7 +57,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <form className="contact-form-body" onSubmit={onSubmit}>
+    <form className="contact-form-body" onSubmit={onSubmit} method="POST">
       <TextField
         id="contact-name"
         name="name"
