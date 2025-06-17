@@ -18,7 +18,7 @@ export const ContactForm = () => {
 
     const form = event.target;
     const formData = new FormData(form);
-    formData.append("access_key", import.meta.env.EMAIL_KEY);
+    formData.append("access_key", process.env.EMAIL_KEY);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
