@@ -1,0 +1,117 @@
+.footer-container {
+  display: flex;
+  padding-top: 3rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem;
+  border-top: 1px solid #D3D3D3;
+}
+
+.footer-container .footer-logo {
+  height: 5rem;
+}
+
+.footer-links {
+  display: flex;
+  align-items: flex-start;
+  gap: 160px;
+  align-self: stretch;
+}
+
+.follow-links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.follow-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  transition: all 0.5s ease;
+}
+
+.follow-links img:hover{
+  filter: brightness(0) saturate(100%) invert(29%) sepia(91%) saturate(409%) hue-rotate(129deg) brightness(95%) contrast(97%);
+  transition: all 0.5s ease;
+}
+
+.main-links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+}
+
+.main-links-container > * {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 19px;
+  width: 100%;
+}
+
+.main-links-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.main-links-container ul a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Small Desktop (1024px – 1279px) */
+@media screen and (max-width: 1279px) {
+    .footer-links{
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .main-links-container{
+        width: 100%;
+    }
+    .footer-container .footer-logo {
+  height: 4.5rem;
+}
+}
+
+/* Tablet (768px – 1023px) */
+@media screen and (max-width: 1023px) {
+    .footer-container{
+        gap: 3rem;
+    }
+    .main-links-container{
+        flex-wrap: nowrap;
+    }
+    .footer-container .footer-logo {
+  height: 4rem;
+}
+}
+
+/* Mobile (<768px) */
+@media screen and (max-width: 767px) {
+     .footer-container{
+        gap: 2rem;
+    }
+    .footer-links{
+        gap: 2rem;
+    }
+    .main-links-container{
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+    .main-links-container > * {
+        width: 40%;
+    }
+    .footer-container .footer-logo {
+  height: 3rem;
+}
+}

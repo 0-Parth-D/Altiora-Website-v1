@@ -1,0 +1,252 @@
+:root {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Colors  */
+  --teal-green-50: #e7fdfc;
+  --teal-green-100: #d0fbfa;
+  --teal-green-200: #a1f7f4;
+  --teal-green-300: #72f3ef;
+  --teal-green-400: #43efe9;
+  --teal-green-500: #10bcb6;
+  --teal-green-600: #0c8d89;
+  --teal-green-700: #096b68;
+  --teal-green-800: #085e5b;
+  --teal-green-900: #042f2e;
+  --teal-green-950: #021817;
+}
+
+html {
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Base text style */
+.text {
+  margin: 0;
+  font-style: normal;
+  line-height: 116.7%;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Font families */
+.text-onest {
+  font-family: Onest;
+}
+
+.text-bricolage {
+  font-family: "Bricolage Grotesque";
+}
+
+/* Font weights */
+.text-light {
+  font-weight: 300;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+/* Default: Large Desktop (≥1280px) */
+.text-h-1,
+.text-h-1 * {
+  font-size: 6rem;
+}
+.text-h-2,
+.text-h-2 * {
+  font-size: 3.75rem;
+}
+.text-h-3,
+.text-h-3 * {
+  font-size: 3rem;
+}
+.text-h-4,
+.text-h-4 * {
+  font-size: 2.125rem;
+}
+.text-h-5,
+.text-h-5 * {
+  font-size: 1.5rem;
+}
+.text-h-6,
+.text-h-6 * {
+  font-size: 1.25rem;
+}
+
+.text-subtitle-1,
+.text-subtitle-1 * {
+  font-size: 1rem;
+}
+.text-subtitle-2,
+.text-subtitle-2 * {
+  font-size: 0.875rem;
+}
+
+.text-body-1,
+.text-body-1 * {
+  font-size: 1rem;
+}
+.text-body-2,
+.text-body-2 * {
+  font-size: 0.875rem;
+}
+
+/* Small Desktop (1024px – 1279px) */
+@media screen and (max-width: 1279px) {
+  .text-h-1,
+  .text-h-1 * {
+    font-size: 5rem;
+  }
+  .text-h-2,
+  .text-h-2 * {
+    font-size: 3.25rem;
+  }
+  .text-h-3,
+  .text-h-3 * {
+    font-size: 2.5rem;
+  }
+  .text-h-4,
+  .text-h-4 * {
+    font-size: 1.875rem;
+  }
+  .text-h-5,
+  .text-h-5 * {
+    font-size: 1.375rem;
+  }
+  .text-h-6,
+  .text-h-6 * {
+    font-size: 1.125rem;
+  }
+
+  .text-subtitle-1,
+  .text-subtitle-1 * {
+    font-size: 0.95rem;
+  }
+  .text-subtitle-2,
+  .text-subtitle-2 * {
+    font-size: 0.825rem;
+  }
+
+  .text-body-1,
+  .text-body-1 * {
+    font-size: 0.95rem;
+  }
+  .text-body-2,
+  .text-body-2 * {
+    font-size: 0.825rem;
+  }
+}
+
+/* Tablet (768px – 1023px) */
+@media screen and (max-width: 1023px) {
+  .text-h-1,
+  .text-h-1 * {
+    font-size: 4rem;
+  }
+  .text-h-2,
+  .text-h-2 * {
+    font-size: 2.75rem;
+  }
+  .text-h-3,
+  .text-h-3 * {
+    font-size: 2.25rem;
+  }
+  .text-h-4,
+  .text-h-4 * {
+    font-size: 1.5rem;
+  }
+  .text-h-5,
+  .text-h-5 * {
+    font-size: 1.25rem;
+  }
+  .text-h-6,
+  .text-h-6 * {
+    font-size: 1rem;
+  }
+
+  .text-subtitle-1,
+  .text-subtitle-1 * {
+    font-size: 0.9rem;
+  }
+  .text-subtitle-2,
+  .text-subtitle-2 * {
+    font-size: 0.8rem;
+  }
+
+  .text-body-1,
+  .text-body-1 * {
+    font-size: 0.9rem;
+  }
+  .text-body-2,
+  .text-body-2 * {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile (<768px) */
+@media screen and (max-width: 767px) {
+  .text-h-1,
+  .text-h-1 * {
+    font-size: 2.5rem;
+  }
+  .text-h-2,
+  .text-h-2 * {
+    font-size: 2.25rem;
+  }
+  .text-h-3,
+  .text-h-3 * {
+    font-size: 1.75rem;
+  }
+  .text-h-4,
+  .text-h-4 * {
+    font-size: 1.25rem;
+  }
+  .text-h-5,
+  .text-h-5 * {
+    font-size: 1rem;
+  }
+  .text-h-6,
+  .text-h-6 * {
+    font-size: 0.875rem;
+  }
+
+  .text-subtitle-1,
+  .text-subtitle-1 * {
+    font-size: 0.875rem;
+  }
+  .text-subtitle-2,
+  .text-subtitle-2 * {
+    font-size: 0.75rem;
+  }
+
+  .text-body-1,
+  .text-body-1 * {
+    font-size: 0.875rem;
+  }
+  .text-body-2,
+  .text-body-2 * {
+    font-size: 0.75rem;
+  }
+}

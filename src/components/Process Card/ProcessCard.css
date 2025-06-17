@@ -1,0 +1,55 @@
+.process-card-container {
+  display: flex;
+  padding: 1.75rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  align-self: stretch;
+  border-radius: 20px;
+}
+
+.process-card-container.secondary {
+  background-color: #efefef;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%2333333340' stroke-width='3' stroke-dasharray='12%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 20px;
+}
+
+.process-card-container.primary {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.process-card-container.primary h6 {
+  color: #767676;
+}
+
+.process-card-img {
+  height: 20vh;
+  min-height: 10rem;
+  align-self: stretch;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.process-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.process-title h4 {
+  align-self: stretch;
+  text-align: center;
+}
+
+.process-title h6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  color: #6c6c6c;
+  text-align: center;
+}

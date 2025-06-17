@@ -1,0 +1,81 @@
+.primary-btn {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  gap: 0.625rem;
+
+  background: var(--teal-green-700);
+  border: 0.125rem solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  color: #ffffff;
+
+  cursor: pointer;
+  max-width: 8em;
+  overflow: hidden;
+  position: relative;
+
+  span {
+    z-index: 2;
+  }
+
+  &:after {
+    background: #fff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: 0.2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 1000ms cubic-bezier(1, 0, 0, 1);
+    width: 50px;
+    z-index: 1;
+  }
+}
+
+/* Hover state */
+.primary-btn:hover:not(:disabled) {
+  &:after {
+    left: 120%;
+    transition: all 800ms cubic-bezier(1, 0, 0, 1);
+  }
+}
+
+/* Focus state */
+.primary-btn:focus-visible {
+  outline: 3px solid var(--teal-green-400);
+  outline-offset: 3px;
+  box-shadow: 0 0 8px var(--teal-green-400);
+}
+
+/* Active state (when pressed) */
+.primary-btn:active:not(:disabled) {
+  background: var(--teal-green-800);
+  border-color: rgba(0, 0, 0, 0.4);
+
+  &:after {
+    opacity: 0.1;
+  }
+
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
+
+/* Disabled state */
+.primary-btn:disabled {
+  background: var(--teal-green-900); /* lighter teal or greyed out */
+  border-color: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: not-allowed;
+
+  &:after {
+    display: none;
+  }
+}
+
+.button-icon {
+  height: 1em;
+}
