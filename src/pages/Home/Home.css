@@ -13,15 +13,35 @@
 }
 
 .hero-container {
-  height: 75vh;
+  height: 80vh;
   /* max-height: fit-content; */
   display: flex;
   gap: 4rem;
   width: 100%;
+  position: relative;
+}
+
+.hero-bg-video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+}
+
+.hero-bg-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-title-container {
   min-width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .hero-card {
@@ -49,7 +69,8 @@
   height: 100%;
 }
 
-.hero-card img, .hero-card video {
+.hero-card img,
+.hero-card video {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -156,7 +177,7 @@
   gap: 2rem;
 }
 
-.services-body{
+.services-body {
   width: 100%;
   height: 100%;
   display: flex;
@@ -228,7 +249,7 @@
 
 .why-us-slider-track {
   display: flex;
-  gap: 4rem;  /* same as your gap */
+  gap: 4rem; /* same as your gap */
   animation: scroll-left 20s linear infinite;
 }
 
@@ -316,8 +337,10 @@
   .main-container {
     padding: 1rem 3rem;
   }
-  .hero-container{
-    max-height: fit-content;
+  .hero-container {
+    /* max-height: fit-content; */
+    margin: 0rem -3rem;
+    padding: 0rem 3rem;
   }
   .main-wrapper {
     gap: 12rem;
@@ -337,7 +360,9 @@
   .hero-container {
     gap: 2.5rem;
     flex-direction: column;
-    max-height: fit-content;
+    /* max-height: fit-content; */
+    margin: 0rem -2.75rem;
+    padding: 0rem 2.75rem;
   }
   .main-wrapper {
     gap: 7.5rem;
@@ -370,7 +395,21 @@
   .hero-container {
     gap: 2rem;
     flex-direction: column;
-    max-height: fit-content;
+    /* max-height: fit-content; */
+    margin: -2.25rem -2.5rem 0rem -2.5rem;
+    padding: 2.25rem 2.5rem 0rem 2.5rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-title-text-container {
+    gap: 0.5rem;
+  }
+  .hero-bg-video {
+    display: block;
+  }
+  .hero-card {
+    display: none;
   }
   .main-wrapper {
     gap: 5rem;
@@ -381,13 +420,14 @@
   .services-container {
     gap: 2rem;
   }
-  .services-card{
+  .services-card {
     flex-direction: column;
   }
-  .services-slider, .services-list{
+  .services-slider,
+  .services-list {
     width: 100%;
   }
-  .services-list{
+  .services-list {
     gap: 0.5rem;
   }
 
@@ -407,5 +447,42 @@
   }
   .contact-form {
     width: 100%;
+  }
+}
+
+/* MUI input color change */
+@media screen and (max-width: 767px) {
+  /* Input text and placeholder */
+  #hero-message-label {
+    color: #c3c3c3; /* input text */
+  }
+
+  #hero-message-label ::placeholder {
+    color: #c3c3c3; /* placeholder text */
+    opacity: 1;
+  }
+
+  /* Label */
+  #hero-message-label,
+  .MuiInputLabel-root {
+    color: #c3c3c3 !important;
+  }
+
+  /* Helper text */
+  .MuiFormHelperText-root {
+    color: #c3c3c3 !important;
+  }
+
+  /* Underline for standard variant */
+  #hero-message-label ~ .MuiInput-underline:before {
+    border-bottom-color: #c3c3c3; /* default underline */
+  }
+
+  #hero-message-label ~ .MuiInput-underline:hover:before {
+    border-bottom-color: #c3c3c3; /* hover underline */
+  }
+
+  #hero-message-label ~ .MuiInput-underline:after {
+    border-bottom-color: white; /* focused underline */
   }
 }

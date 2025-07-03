@@ -126,6 +126,15 @@ const Home = ({ loading }) => {
         <Navbar loading={loading} /> */}
         <div className="main-wrapper">
           <section id="hero-section"  className="hero-container">
+            <div className="hero-bg-video">
+              <video autoPlay muted loop playsInline loading="lazy">
+                    <source
+                      src="/stock video/hero-1.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+            </div>
             <div className="hero-title-container">
               <div className="hero-title-text-container">
                 {!loading && (
