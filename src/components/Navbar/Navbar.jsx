@@ -102,10 +102,12 @@ const Navbar = (props) => {
 
         {/* Menu modal/sidebar medium screen */}
         <div
-          className={`menu-modal main-container ${
+          className={`menu-modal ${
             menuClicked ? "visible" : "hidden"
           }`}
         >
+          <div className="modal-main main-container">
+
           {/* Menu modal header */}
           <div className="modal-header navbar-container">
             <Link to="/">
@@ -123,17 +125,18 @@ const Navbar = (props) => {
           </div>
 
           {/* Modal links */}
-          <div className="nav-list-modal text text-h-4 text-light text-onest">
+          <div className="nav-list-modal text-onest">
+            <h1 className="text text-h-1 text-bold">Menu</h1>
             {links.map((link, index) => (
               <Link
                 key={index}
                 to={link.href}
                 style={{
-                  transition: `padding ${
-                    2 + index * 0.1
+                  transition: `all ${
+                    0.8 + index * 0.1
                   }s cubic-bezier(1, 0, 0, 1)`,
                 }}
-                className="nav-link"
+                className="nav-link text text-h-4 text-light"
                 onClick={openMenu}
               >
                 {link.text}
@@ -143,12 +146,13 @@ const Navbar = (props) => {
 
           {/* Modal CTA button */}
           <div className="modal-btn" style={{
-                  transition: `padding 2s cubic-bezier(1, 0, 0, 1)`,
+                  transition: `all 0.8s cubic-bezier(1, 0, 0, 1)`,
                 }} onClick={openMenu}>
             <Link to="#contact-section">
               <Button body="Contact" icon="call" />
             </Link>
           </div>
+        </div>
         </div>
       </div>
     </>
