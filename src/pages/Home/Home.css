@@ -13,7 +13,7 @@
 }
 
 .hero-container {
-  height: 80vh;
+  height: 75vh;
   /* max-height: fit-content; */
   display: flex;
   gap: 4rem;
@@ -29,6 +29,7 @@
   left: 0;
   z-index: -1;
   display: none;
+  background: black;
 }
 
 .hero-bg-video video {
@@ -280,6 +281,10 @@
   width: 75%;
 }
 
+.anim-content-opacity{
+  opacity: 0;
+}
+
 .card-table {
   display: flex;
   flex-direction: column;
@@ -361,8 +366,20 @@
     gap: 2.5rem;
     flex-direction: column;
     /* max-height: fit-content; */
-    margin: 0rem -2.75rem;
-    padding: 0rem 2.75rem;
+    margin: -2.25rem -2.75rem 0rem -2.75rem;
+    padding: 2.25rem 2.75rem 0rem 2.75rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-title-text-container {
+    gap: 0.5rem;
+  }
+  .hero-bg-video {
+    display: block;
+  }
+  .hero-card {
+    display: none;
   }
   .main-wrapper {
     gap: 7.5rem;
@@ -388,6 +405,17 @@
     width: 100%;
   }
 }
+
+.black-tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* 0.3 = 30% black tint */
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
 @media screen and (max-width: 767px) {
   .main-container {
     padding: 0.5rem 2.5rem;
@@ -451,7 +479,7 @@
 }
 
 /* MUI input color change */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px), screen and (max-width: 1023px)  {
   /* Input text and placeholder */
   #hero-message-label {
     color: #c3c3c3; /* input text */

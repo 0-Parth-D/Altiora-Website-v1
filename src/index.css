@@ -48,8 +48,9 @@ body {
   font-family: Onest;
 }
 
-.text-bricolage {
-  font-family: "Bricolage Grotesque";
+.text-secondary {
+  /* font-family: "Bricolage Grotesque"; */
+  font-family: "Schibsted Grotesk", sans-serif;
 }
 
 /* Font weights */
