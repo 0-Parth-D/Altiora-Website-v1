@@ -260,10 +260,23 @@ const Home = ({ loading }) => {
             >
               {/* <div className="hero-card"> */}
               <div className="slider-container">
-                <video autoPlay muted loop playsInline loading="lazy">
+                {/* <video autoPlay muted loop playsInline loading="lazy">
                   <source src="/stock video/hero-1.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
-                </video>
+                </video> */}
+                <video
+              ref={videoRef}
+              autoPlay
+              muted
+              loop={false}
+              playsInline
+              onEnded={handleVideoEnded}
+              key={currentIndex}
+            >
+              <source src={videoSources[currentIndex]} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="black-tint"></div>
               </div>
               {/* </div> */}
             </FadeContent>
