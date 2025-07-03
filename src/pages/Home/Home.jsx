@@ -265,18 +265,18 @@ const Home = ({ loading }) => {
                   Your browser does not support the video tag.
                 </video> */}
                 <video
-              ref={videoRef}
-              autoPlay
-              muted
-              loop={false}
-              playsInline
-              onEnded={handleVideoEnded}
-              key={currentIndex}
-            >
-              <source src={videoSources[currentIndex]} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="black-tint"></div>
+                  ref={videoRef}
+                  autoPlay
+                  muted
+                  loop={false}
+                  playsInline
+                  onEnded={handleVideoEnded}
+                  key={currentIndex}
+                >
+                  <source src={videoSources[currentIndex]} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="black-tint"></div>
               </div>
               {/* </div> */}
             </FadeContent>
