@@ -96,17 +96,17 @@ function App() {
 
       {/* Page content */}
       <div className={`page-content ${loading ? "hidden" : "visible"}`}>
-        <ClickSpark
+        {/* <ClickSpark
           sparkColor="#096b68"
           sparkSize={10}
           sparkRadius={15}
           sparkCount={8}
           duration={200}
-        >
+        > */}
           <div className="main-container">
             <RouterProvider router={router} />
           </div>
-        </ClickSpark>
+        {/* </ClickSpark> */}
       </div>
     </div>
   );
