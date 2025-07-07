@@ -88,7 +88,7 @@ function App() {
   }, [loading]);
 
   return (
-    <div className="app-wrapper" style={{ height: "100vh", overflowY: "auto" }}>
+    <div className={`app-wrapper`} style={{ height: "100vh", overflowY: "auto" }}>
       {/* Loader */}
       <div className={`loader-container ${loading ? "visible" : "hidden"}`}>
         <HashLoader color="#096b68" size={120} />

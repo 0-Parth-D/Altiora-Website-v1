@@ -392,7 +392,7 @@ const Home = ({ loading }) => {
                 ref={ref}
                 style={{ x: xTranslation }}
               >
-                {[...sliderImages, ...sliderImages].map((item, idx) => (
+                {[...sliderImages, ...sliderImages, ...sliderImages, ...sliderImages].map((item, idx) => (
                   <ScrollIcon key={idx} imgSrc={item} />
                 ))}
               </motion.div>
