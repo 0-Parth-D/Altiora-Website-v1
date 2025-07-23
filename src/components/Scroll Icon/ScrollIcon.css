@@ -17,3 +17,15 @@ height: 100%;
 flex-shrink: 0;
 aspect-ratio: 57.60/57.60;
 }
+
+@media screen and (max-width: 1279px) {
+}
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+    .scroll-icon{
+        width: 1rem;
+        height: 1rem;
+    }
+}

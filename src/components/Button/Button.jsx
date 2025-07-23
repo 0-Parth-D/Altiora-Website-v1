@@ -6,8 +6,10 @@ export class Button extends Component {
     return (
       <button
         id={this.props.id}
-        className={`primary-btn text text-onest text-body-1 text-regular text-body-1-regular ${
+        className={`btn text text-onest text-body-1 text-regular text-body-1-regular ${
           this.props.className ? this.props.className : " "
+        } ${
+          this.props.secondary ? "secondary-btn" : "primary-btn"
         }`}
         type={this.props.type ? this.props.type : "button"}
         disabled={this.props.disabled}

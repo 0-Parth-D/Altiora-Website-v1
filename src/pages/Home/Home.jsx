@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Home.css";
 import useMeasure from "react-use-measure";
 import { animate, useMotionValue } from "motion/react";
+import Button from "../../components/Button/Button";
 import { motion } from "motion/react";
 import TextField from "@mui/material/TextField";
 import ServiceCard from "../../components/Service Card/ServiceCard";
@@ -181,7 +182,7 @@ const Home = ({ loading }) => {
                   initialOpacity={0}
                   delay={100}
                 >
-                  <h1 className="text text-h-1 text-bold text-secondary">
+                  <h1 className="text text-h-2 text-medium text-secondary">
                     Crafting Tomorrow with Fine Precision
                   </h1>
                 </FadeContent>
@@ -209,7 +210,7 @@ const Home = ({ loading }) => {
                 delay={500}
               >
                 <div className="hero-message-container">
-                  <TextField
+                  {/* <TextField
                     id="hero-message"
                     label="Send us a message"
                     variant="standard"
@@ -244,12 +245,22 @@ const Home = ({ loading }) => {
                       src="/icons/arrow-outward.svg"
                       alt=""
                     />
-                  </button>
+                  </button> */}
+                  <Link to="#services-section">
+                    <Button body="Solutions" icon="package-white" />
+                  </Link>
+                  <Link to="#contact-section">
+                    <Button
+                      body="About"
+                      icon="arrow-outward-white"
+                      secondary="true"
+                    />
+                  </Link>
                 </div>
               </FadeContent>
             )}
           </div>
-          {!loading && (
+          {/* {!loading && (
             <FadeContent
               blur={false}
               duration={2000}
@@ -258,12 +269,7 @@ const Home = ({ loading }) => {
               delay={500}
               className="hero-card"
             >
-              {/* <div className="hero-card"> */}
               <div className="slider-container">
-                {/* <video autoPlay muted loop playsInline loading="lazy">
-                  <source src="/stock video/hero-1.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video> */}
                 <video
                   ref={videoRef}
                   autoPlay
@@ -278,9 +284,8 @@ const Home = ({ loading }) => {
                 </video>
                 <div className="black-tint"></div>
               </div>
-              {/* </div> */}
             </FadeContent>
-          )}
+          )} */}
         </section>
         <section id="services-section" className="services-container">
           {!loading && (
@@ -298,7 +303,7 @@ const Home = ({ loading }) => {
               className="anim-content-opacity"
             >
               <div className="services-title-container">
-                <h1 className="text text-h-1 text-bold text-secondary">
+                <h1 className="text text-h-2 text-medium text-secondary">
                   Discover Our Services
                 </h1>
                 <h5 className="text text-h-6 text-light text-onest">
@@ -308,82 +313,36 @@ const Home = ({ loading }) => {
               </div>
             </AnimatedContent>
           )}
-
-          <div className="services-card">
-            {!loading && (
-              <AnimatedContent
-                distance={150}
-                direction="horizontal"
-                reverse={true}
-                duration={1.2}
-                ease="power3.out"
-                initialOpacity={0}
-                animateOpacity
-                scale={1}
-                threshold={0.2}
-                delay={0.1}
-                className="services-slider anim-content-opacity"
-              >
-                <div id="services-body" className="services-body">
-                  <video
-                    src="/stock video/services-1.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    loading="lazy"
-                  />
-                  <video
-                    src="/stock video/services-2.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    loading="lazy"
-                  />
-                  <video
-                    src="/stock video/services-3.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    loading="lazy"
-                  />
-                </div>
-              </AnimatedContent>
-            )}
-            {!loading && (
-              <AnimatedContent
-                distance={150}
-                direction="horizontal"
-                reverse={false}
-                duration={1.2}
-                ease="power3.out"
-                initialOpacity={0}
-                animateOpacity
-                scale={1}
-                threshold={0.2}
-                delay={0.1}
-                className="services-list anim-content-opacity"
-              >
-                {services.map((service, index) => (
-                  <ServiceCard
-                    key={service.title}
-                    active={activeIndex === index}
-                    title={service.title}
-                    body={service.body}
-                    onClick={() => handleCardClick(index)}
-                  />
-                ))}
-              </AnimatedContent>
-            )}
+          <div className="services-card-container">
+            <ServiceCard
+              loading={loading}
+              video="services-1"
+              title="Manufacturing"
+              subtitle="Engineering solutions that enhance efficiency."
+              body="Whether in manufacturing or healthcare, we offer methods that simplify processes and foster success."
+            ></ServiceCard>
+            <ServiceCard
+              loading={loading}
+              left={true}
+              video="services-2"
+              title="Sourcing"
+              subtitle="Sourcing strategies that drive efficiency."
+              body="We provide strategies for material sourcing in manufacturing, enhancing efficiency and optimizing resources."
+            ></ServiceCard>
+            <ServiceCard
+              loading={loading}
+              video="services-3"
+              title="Design"
+              subtitle="Design solutions tailored for the manufacturing sector."
+              body="We provide cutting-edge manufacturing design solutions that improve workflows and drive success."
+            ></ServiceCard>
           </div>
         </section>
         <section id="why-us-section" className="why-us-container">
           <div className="why-us-content">
             {!loading && (
               <SplitText
-                className="text text-h-1 text-bold text-secondary"
+                className="text text-h-2 text-medium text-secondary"
                 delay={100}
                 duration={1.5}
                 ease="power3.out"
@@ -398,7 +357,7 @@ const Home = ({ loading }) => {
               </SplitText>
             )}
 
-            {/* <h1 className="text text-h-1 text-bold text-secondary">
+            {/* <h1 className="text text-h-2 text-medium text-secondary">
                   Why Choose Our Solutions<span>?</span>
                 </h1> */}
             {!loading && (
@@ -471,7 +430,7 @@ const Home = ({ loading }) => {
               className="anim-content-opacity"
             >
               <div className="our-process-header">
-                <h1 className="text text-h-1 text-bold text-secondary">
+                <h1 className="text text-h-2 text-medium text-secondary">
                   Built Around Your Vision
                 </h1>
                 <h5 className="text text-h-6 text-light text-onest">
@@ -597,7 +556,7 @@ const Home = ({ loading }) => {
           />
           <div className="contact-form">
             <div className="contact-header">
-              <h1 className="text text-h-1 text-bold text-secondary">
+              <h1 className="text text-h-2 text-medium text-secondary">
                 We'd love to hear from you
               </h1>
               <h5 className="text text-h-6 text-light text-onest">

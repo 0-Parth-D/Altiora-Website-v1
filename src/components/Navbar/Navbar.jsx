@@ -94,7 +94,7 @@ const Navbar = (props) => {
         <button className="icon-btn" type="button" onClick={openMenu}>
           <img
             className="navbar-menu-icon"
-            src="/icons/hamburger-menu.svg"
+            src="/icons/hamburger-white.svg"
             alt=""
           />
         </button>

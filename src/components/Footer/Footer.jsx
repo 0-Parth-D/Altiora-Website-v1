@@ -89,7 +89,7 @@ export const Footer = () => {
         </div>
       </div>
       <p className="text text-body-2 text-regular text-onest">
-        Copyright © 2025 Altiora Corp - All Rights Reserved.
+        {/* Copyright © 2025 Altiora Corp - All Rights Reserved. */}
       </p>
     </div>
   );

@@ -50,7 +50,8 @@ body {
 
 .text-secondary {
   /* font-family: "Bricolage Grotesque"; */
-  font-family: "Schibsted Grotesk", sans-serif;
+  /* font-family: "Schibsted Grotesk", sans-serif; */
+  font-family: "Spline Sans", sans-serif;
 }
 
 /* Font weights */
@@ -116,138 +117,48 @@ body {
 
 /* Small Desktop (1024px – 1279px) */
 @media screen and (max-width: 1279px) {
-  .text-h-1,
-  .text-h-1 * {
-    font-size: 5rem;
-  }
-  .text-h-2,
-  .text-h-2 * {
-    font-size: 3.25rem;
-  }
-  .text-h-3,
-  .text-h-3 * {
-    font-size: 2.5rem;
-  }
-  .text-h-4,
-  .text-h-4 * {
-    font-size: 1.875rem;
-  }
-  .text-h-5,
-  .text-h-5 * {
-    font-size: 1.375rem;
-  }
-  .text-h-6,
-  .text-h-6 * {
-    font-size: 1.125rem;
-  }
+  .text-h-1, .text-h-1 * { font-size: 3.5rem; }   /* ~56px */
+  .text-h-2, .text-h-2 * { font-size: 2.75rem; }  /* ~44px */
+  .text-h-3, .text-h-3 * { font-size: 2rem; }     /* ~32px */
+  .text-h-4, .text-h-4 * { font-size: 1.5rem; }   /* ~24px */
+  .text-h-5, .text-h-5 * { font-size: 1.25rem; }  /* ~20px */
+  .text-h-6, .text-h-6 * { font-size: 1.125rem; } /* ~18px */
 
-  .text-subtitle-1,
-  .text-subtitle-1 * {
-    font-size: 0.95rem;
-  }
-  .text-subtitle-2,
-  .text-subtitle-2 * {
-    font-size: 0.825rem;
-  }
+  .text-subtitle-1, .text-subtitle-1 * { font-size: 1rem; }   /* ~16px */
+  .text-subtitle-2, .text-subtitle-2 * { font-size: 0.875rem; } /* ~14px */
 
-  .text-body-1,
-  .text-body-1 * {
-    font-size: 0.95rem;
-  }
-  .text-body-2,
-  .text-body-2 * {
-    font-size: 0.825rem;
-  }
+  .text-body-1, .text-body-1 * { font-size: 1rem; }     /* ~16px */
+  .text-body-2, .text-body-2 * { font-size: 0.875rem; } /* ~14px */
 }
 
 /* Tablet (768px – 1023px) */
 @media screen and (max-width: 1023px) {
-  .text-h-1,
-  .text-h-1 * {
-    font-size: 4rem;
-  }
-  .text-h-2,
-  .text-h-2 * {
-    font-size: 2.75rem;
-  }
-  .text-h-3,
-  .text-h-3 * {
-    font-size: 2.25rem;
-  }
-  .text-h-4,
-  .text-h-4 * {
-    font-size: 1.5rem;
-  }
-  .text-h-5,
-  .text-h-5 * {
-    font-size: 1.25rem;
-  }
-  .text-h-6,
-  .text-h-6 * {
-    font-size: 1rem;
-  }
+  .text-h-1, .text-h-1 * { font-size: 3rem; }     /* ~48px */
+  .text-h-2, .text-h-2 * { font-size: 2.25rem; }  /* ~36px */
+  .text-h-3, .text-h-3 * { font-size: 1.75rem; }  /* ~28px */
+  .text-h-4, .text-h-4 * { font-size: 1.375rem; } /* ~22px */
+  .text-h-5, .text-h-5 * { font-size: 1.125rem; } /* ~18px */
+  .text-h-6, .text-h-6 * { font-size: 1rem; }     /* ~16px */
 
-  .text-subtitle-1,
-  .text-subtitle-1 * {
-    font-size: 0.9rem;
-  }
-  .text-subtitle-2,
-  .text-subtitle-2 * {
-    font-size: 0.8rem;
-  }
+  .text-subtitle-1, .text-subtitle-1 * { font-size: 0.95rem; }  /* ~15px */
+  .text-subtitle-2, .text-subtitle-2 * { font-size: 0.825rem; } /* ~13px */
 
-  .text-body-1,
-  .text-body-1 * {
-    font-size: 0.9rem;
-  }
-  .text-body-2,
-  .text-body-2 * {
-    font-size: 0.8rem;
-  }
+  .text-body-1, .text-body-1 * { font-size: 0.95rem; }   /* ~15px */
+  .text-body-2, .text-body-2 * { font-size: 0.825rem; }  /* ~13px */
 }
 
 /* Mobile (<768px) */
 @media screen and (max-width: 767px) {
-  .text-h-1,
-  .text-h-1 * {
-    font-size: 2.5rem;
-  }
-  .text-h-2,
-  .text-h-2 * {
-    font-size: 2.25rem;
-  }
-  .text-h-3,
-  .text-h-3 * {
-    font-size: 1.75rem;
-  }
-  .text-h-4,
-  .text-h-4 * {
-    font-size: 1.25rem;
-  }
-  .text-h-5,
-  .text-h-5 * {
-    font-size: 1rem;
-  }
-  .text-h-6,
-  .text-h-6 * {
-    font-size: 0.875rem;
-  }
+  .text-h-1, .text-h-1 * { font-size: 2.25rem; }  /* ~36px */
+  .text-h-2, .text-h-2 * { font-size: 1.875rem; } /* ~30px */
+  .text-h-3, .text-h-3 * { font-size: 1.5rem; }   /* ~24px */
+  .text-h-4, .text-h-4 * { font-size: 1.25rem; }  /* ~20px */
+  .text-h-5, .text-h-5 * { font-size: 1rem; }     /* ~16px */
+  .text-h-6, .text-h-6 * { font-size: 0.875rem; } /* ~14px */
 
-  .text-subtitle-1,
-  .text-subtitle-1 * {
-    font-size: 0.875rem;
-  }
-  .text-subtitle-2,
-  .text-subtitle-2 * {
-    font-size: 0.75rem;
-  }
+  .text-subtitle-1, .text-subtitle-1 * { font-size: 0.875rem; } /* ~14px */
+  .text-subtitle-2, .text-subtitle-2 * { font-size: 0.75rem; }  /* ~12px */
 
-  .text-body-1,
-  .text-body-1 * {
-    font-size: 0.875rem;
-  }
-  .text-body-2,
-  .text-body-2 * {
-    font-size: 0.75rem;
-  }
+  .text-body-1, .text-body-1 * { font-size: 0.875rem; } /* ~14px */
+  .text-body-2, .text-body-2 * { font-size: 0.75rem; }  /* ~12px */
 }
